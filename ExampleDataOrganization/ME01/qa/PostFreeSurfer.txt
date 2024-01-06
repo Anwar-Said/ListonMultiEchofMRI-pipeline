@@ -1,0 +1,73 @@
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: Platform Information Follows: 
+Linux jarvis 6.2.0-33-generic #33~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep  7 10:33:52 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+========================================
+  DIRECTORY: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+    PRODUCT: HCP Pipeline Scripts
+    VERSION: Post-v4.7.0-MOD-21c0867
+     COMMIT: 21c0867c7f3a59554b9e28f5fe5cddd41e159170
+   MODIFIED: YES
+========================================
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: arguments: --path=/isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization --subject=ME01 --surfatlasdir=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/standard_mesh_atlases --grayordinatesdir=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/91282_Greyordinates --grayordinatesres=2 --hiresmesh=164 --lowresmesh=32 --subcortgraylabels=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/FreeSurferSubcorticalLabelTableLut.txt --freesurferlabels=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/FreeSurferAllLut.txt --refmyelinmaps=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/standard_mesh_atlases/Conte69.MyelinMap_BC.164k_fs_LR.dscalar.nii --regname=MSMSulc --processing-mode=LegacyStyleData
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: StudyFolder: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: Subject: ME01
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: SurfaceAtlasDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/standard_mesh_atlases
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: GrayordinatesResolutions: 2
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: GrayordinatesSpaceDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/91282_Greyordinates
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: HighResMesh: 164
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: LowResMeshes: 32
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: SubcorticalGrayLabels: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/FreeSurferSubcorticalLabelTableLut.txt
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: FreeSurferLabels: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/FreeSurferAllLut.txt
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: ReferenceMyelinMaps: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/standard_mesh_atlases/Conte69.MyelinMap_BC.164k_fs_LR.dscalar.nii
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: CorrectionSigma: 14.14213562373095048801
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: RegName: MSMSulc
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: InflateExtraScale: 1
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: ProcessingMode: LegacyStyleData
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: QCMode: yes
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: UseIndMean: YES
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: FSLDIR: /isis/home/saida2/fsl
+/isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w ==========================================================================
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: LegacyStyleData mode requested.
+NOTICE: You are using a mode that enables processing of acquisitions that do not
+        conform to the HCP specification as described in Glasser et al. (2013)!
+        Be aware that if the HCP requirements are not met, the level of data
+        quality can not be guaranteed and the Glasser et al. (2013) paper should
+        not be used in support of this workflow.
+
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: The following LegacyStyleData settings were requested:
+
+    T2w image not present
+
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: Conversion of FreeSurfer Volumes and Surfaces to NIFTI and GIFTI and Create Caret Files and Registration
+Tue Oct 17 17:06:23 CDT 2023:PostFreeSurferPipeline.sh: RegName: MSMSulc
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: FSLDIR: /isis/home/saida2/fsl
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: CARET7DIR: /usr/bin
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: MSMBINDIR: /root/pipeline_tools/MSM
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: MSMCONFIGDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/MSMConfig
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: START
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: StudyFolder: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: Subject: ME01
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: T1wFolder: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: AtlasSpaceFolder: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/MNINonLinear
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: NativeFolder: Native
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: FreeSurferFolder: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/ME01
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: FreeSurferInput: T1w_acpc_dc_restore_1mm
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: T1wImage: T1w_acpc_dc_restore
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: T2wImage: NONE
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: SurfaceAtlasDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/standard_mesh_atlases
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: HighResMesh: 164
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: LowResMeshes: 32
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: AtlasTransform: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/MNINonLinear/xfms/acpc_dc2standard
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: InverseAtlasTransform: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/MNINonLinear/xfms/standard2acpc_dc
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: AtlasSpaceT1wImage: T1w_restore
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: AtlasSpaceT2wImage: T2w_restore
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: T1wImageBrainMask: brainmask_fs
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: FreeSurferLabels: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/FreeSurferAllLut.txt
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: GrayordinatesSpaceDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/91282_Greyordinates
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: GrayordinatesResolutions: 2
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: SubcorticalGrayLabels: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/FreeSurferSubcorticalLabelTableLut.txt
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: RegName: MSMSulc
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: InflateExtraScale: 1
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: LowResMeshes: 32
+Tue Oct 17 17:06:23 CDT 2023:FreeSurfer2CaretConvertAndRegisterNonlinear.sh: GrayordinatesResolutions: 2
+FreeSurferFolder is set to: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/ME01

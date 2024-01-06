@@ -1,0 +1,42 @@
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: arguments: --subject=ME01 --subjectDIR=/isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w --t1=/isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/T1w_acpc_dc_restore.nii.gz --t1brain=/isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/T1w_acpc_dc_restore_brain.nii.gz --t2=/isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/T2w_acpc_dc_restore.nii.gz --processing-mode=LegacyStyleData
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: SubjectID: ME01
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: SubjectDIR: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: T1wImage: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/T1w_acpc_dc_restore.nii.gz
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: T1wImageBrain: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/T1w_acpc_dc_restore_brain.nii.gz
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: T2wImage: /isis/home/saida2/projects/Conorpipeline/Liston-Laboratory-MultiEchofMRI-Pipeline/ExampleDataOrganization/ME01/T1w/T2w_acpc_dc_restore.nii.gz
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: recon_all_seed: 
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: flairString: FALSE
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: existing_subjectString: FALSE
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: extra_reconall_args: 
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: conf2hiresString: TRUE
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: ProcessingMode: LegacyStyleData
+Tue Oct 17 17:06:22 CDT 2023:FreeSurferPipeline.sh: LegacyStyleData mode requested.
+NOTICE: You are using a mode that enables processing of acquisitions that do not
+        conform to the HCP specification as described in Glasser et al. (2013)!
+        Be aware that if the HCP requirements are not met, the level of data
+        quality can not be guaranteed and the Glasser et al. (2013) paper should
+        not be used in support of this workflow.
+
+========================================
+  DIRECTORY: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+    PRODUCT: HCP Pipeline Scripts
+    VERSION: Post-v4.7.0-MOD-21c0867
+     COMMIT: 21c0867c7f3a59554b9e28f5fe5cddd41e159170
+   MODIFIED: YES
+========================================
+Tue Oct 17 17:06:23 CDT 2023:FreeSurferPipeline.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Tue Oct 17 17:06:23 CDT 2023:FreeSurferPipeline.sh: FREESURFER_HOME: /isis/home/saida2/fsl/lib/python3.11/site-packages/nibabel/freesurfer
+Tue Oct 17 17:06:23 CDT 2023:FreeSurferPipeline.sh: Platform Information Follows: 
+Linux jarvis 6.2.0-33-generic #33~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep  7 10:33:52 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+Tue Oct 17 17:06:23 CDT 2023:FreeSurferPipeline.sh: Showing HCP Pipelines version
+========================================
+  DIRECTORY: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+    PRODUCT: HCP Pipeline Scripts
+    VERSION: Post-v4.7.0-MOD-21c0867
+     COMMIT: 21c0867c7f3a59554b9e28f5fe5cddd41e159170
+   MODIFIED: YES
+========================================
+Tue Oct 17 17:06:23 CDT 2023:FreeSurferPipeline.sh: Showing recon-all.v6.hires version
+Tue Oct 17 17:06:23 CDT 2023:FreeSurferPipeline.sh: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/FreeSurfer/custom/recon-all.v6.hires
+freesurfer-linux-ubuntu22_x86_64-7.4.1-20230614-7eb8460
+Tue Oct 17 17:06:23 CDT 2023:FreeSurferPipeline.sh: Showing tkregister version

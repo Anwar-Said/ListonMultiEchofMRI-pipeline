@@ -1,0 +1,213 @@
+
+Anatomical Preprocessing and Surface Registration Pipeline
+
+Running PreFreeSurferPipeline
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: arguments: --path=/isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids --subject=SMART005 --t1=/isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/anat/unprocessed/T1w/T1w_1.nii.gz@ --t2=NONE --t1template=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm.nii.gz --t1templatebrain=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain.nii.gz --t1template2mm=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm.nii.gz --t2template=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm.nii.gz --t2templatebrain=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm_brain.nii.gz --t2template2mm=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_2mm.nii.gz --templatemask=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain_mask.nii.gz --template2mmmask=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm_brain_mask_dil.nii.gz --brainsize=170 --fnirtconfig=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/T1_2_MNI152_2mm.cnf --fmapmag=NONE --fmapphase=NONE --fmapgeneralelectric=NONE --echodiff=NONE --SEPhaseNeg=NONE --SEPhasePos=NONE --seechospacing=NONE --seunwarpdir=NONE --t1samplespacing=NONE --t2samplespacing=NONE --unwarpdir=z --gdcoeffs=NONE --avgrdcmethod=NONE --topupconfig=NONE --processing-mode=LegacyStyleData
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: StudyFolder: /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: Subject: SMART005
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T1wInputImages: /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/anat/unprocessed/T1w/T1w_1.nii.gz@
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T2wInputImages: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T1wTemplate: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T1wTemplateBrain: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T1wTemplate2mm: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T2wTemplate: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T2wTemplateBrain: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm_brain.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T2wTemplate2mm: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_2mm.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: TemplateMask: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain_mask.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: Template2mmMask: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm_brain_mask_dil.nii.gz
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: BrainSize: 170
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: FNIRTConfig: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/T1_2_MNI152_2mm.cnf
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: MagnitudeInputName: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: PhaseInputName: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: GEB0InputName: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: TE: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: SpinEchoPhaseEncodeNegative: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: SpinEchoPhaseEncodePositive: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: SEEchoSpacing: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: SEUnwarpDir: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T1wSampleSpacing: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T2wSampleSpacing: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: UnwarpDir: z
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: GradientDistortionCoeffs: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: AvgrdcSTRING: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: TopupConfig: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: BiasFieldSmoothingSigma: 
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: CustomBrain: NONE
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: ProcessingMode: LegacyStyleData
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: UseJacobian: True
+========================================
+  DIRECTORY: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+    PRODUCT: HCP Pipeline Scripts
+    VERSION: Post-v4.7.0-MOD-21c0867
+     COMMIT: 21c0867c7f3a59554b9e28f5fe5cddd41e159170
+   MODIFIED: YES
+========================================
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: FSLDIR: /isis/home/saida2/fsl
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: HCPPIPEDIR_Global: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/scripts
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: Platform Information Follows: 
+Linux jarvis 6.2.0-35-generic #35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Oct  6 10:23:26 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: Parsing Command Line Options
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: LegacyStyleData mode requested.
+NOTICE: You are using a mode that enables processing of acquisitions that do not
+        conform to the HCP specification as described in Glasser et al. (2013)!
+        Be aware that if the HCP requirements are not met, the level of data
+        quality can not be guaranteed and the Glasser et al. (2013) paper should
+        not be used in support of this workflow.
+
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: The following LegacyStyleData settings were requested:
+
+    --t2=NONE
+
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T1wFolder: /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/T1w
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: T2wFolder: /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/T2w
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: AtlasSpaceFolder: /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/MNINonLinear
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/T1w/xfms/
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/T2w/xfms/
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/MNINonLinear/xfms/
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: Processing Modality: T1w
+Mon Nov 20 11:50:58 CST 2023:PreFreeSurferPipeline.sh: NOT PERFORMING GRADIENT DISTORTION CORRECTION
+Mon Nov 20 11:50:59 CST 2023:PreFreeSurferPipeline.sh: Not Averaging T1w Images
+Mon Nov 20 11:50:59 CST 2023:PreFreeSurferPipeline.sh: ONLY ONE IMAGE FOUND: COPYING
+Mon Nov 20 11:50:59 CST 2023:PreFreeSurferPipeline.sh: Aligning T1w image to /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm.nii.gz to create native volume space
+Mon Nov 20 11:50:59 CST 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/T1w/ACPCAlignment
+Mon Nov 20 11:50:59 CST 2023:ACPCAlignment.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Mon Nov 20 11:50:59 CST 2023:ACPCAlignment.sh: FSLDIR: /isis/home/saida2/fsl
+Mon Nov 20 11:50:59 CST 2023:ACPCAlignment.sh: START
+Final FOV is: 
+0.000000 208.000000 0.000000 300.000000 66.000000 213.000000 
+
+Mon Nov 20 11:51:47 CST 2023:ACPCAlignment.sh: END
+Mon Nov 20 11:51:47 CST 2023:PreFreeSurferPipeline.sh: Performing Brain Extraction using FNIRT-based Masking
+Mon Nov 20 11:51:47 CST 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/T1w/BrainExtraction_FNIRTbased
+Mon Nov 20 11:51:47 CST 2023:BrainExtraction_FNIRTbased.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Mon Nov 20 11:51:47 CST 2023:BrainExtraction_FNIRTbased.sh: FSLDIR: /isis/home/saida2/fsl
+Mon Nov 20 11:51:47 CST 2023:BrainExtraction_FNIRTbased.sh: HCPPIPEDIR_Templates: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates
+Mon Nov 20 11:51:47 CST 2023:BrainExtraction_FNIRTbased.sh: START: BrainExtraction_FNIRT
+Mon Nov 20 11:56:48 CST 2023:BrainExtraction_FNIRTbased.sh: END: BrainExtraction_FNIRT
+Mon Nov 20 11:56:48 CST 2023:PreFreeSurferPipeline.sh: Skipping Modality: T2w - image not specified.
+Mon Nov 20 11:56:48 CST 2023:PreFreeSurferPipeline.sh: NOT PERFORMING READOUT DISTORTION CORRECTION
+Mon Nov 20 11:56:48 CST 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/mclean/dat/8/0/SMART005/data/smart/data/cornell_bids/SMART005/T2w/T2wToT1wReg
+Mon Nov 20 11:56:48 CST 2023:T2wToT1wReg.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Mon Nov 20 11:56:48 CST 2023:T2wToT1wReg.sh: FSLDIR: /isis/home/saida2/fsl
+Mon Nov 20 11:56:48 CST 2023:T2wToT1wReg.sh: START: T2w2T1Reg
+Mon Nov 20 11:56:48 CST 2023:T2wToT1wReg.sh: Skipping T2w to T1w registration --- no T2w image.
+Mon Nov 20 11:56:54 CST 2023:T2wToT1wReg.sh: END: T2w2T1Reg
+Mon Nov 20 11:56:54 CST 2023:PreFreeSurferPipeline.sh: Performing Bias Field Correction using T1w image only
+Mon Nov 20 11:56:54 CST 2023:BiasFieldCorrection_T1wOnly.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Mon Nov 20 11:56:54 CST 2023:BiasFieldCorrection_T1wOnly.sh: FSLDIR: /isis/home/saida2/fsl
+Mon Nov 20 11:56:54 CST 2023:BiasFieldCorrection_T1wOnly.sh:  START: T1wBiasFieldCorrection
+Starting Single Image Segmentation
+T1-weighted image
+Imagesize : 227 x 272 x 227
+Pixelsize : 0.8 x 0.8 x 0.8
+
+1 6.94216
+2 7.24494
+3 7.46566
+KMeans Iteration 0
+KMeans Iteration 1
+KMeans Iteration 2
+KMeans Iteration 3
+KMeans Iteration 4
+KMeans Iteration 5
+KMeans Iteration 6
+KMeans Iteration 7
+KMeans Iteration 8
+KMeans Iteration 9
+KMeans Iteration 10
+KMeans Iteration 11
+KMeans Iteration 12
+KMeans Iteration 13
+KMeans Iteration 14
+Tanaka Iteration 0 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.16461e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.25016e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.25308e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.25319e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.2532e+07 beta=0.02
+ CLASS 1 MEAN 740.926 STDDEV 451.693 CLASS 2 MEAN 1308.09 STDDEV 221.967 CLASS 3 MEAN 1829.01 STDDEV 204.857
+Tanaka Iteration 1 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.32053e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.40227e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.4047e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.40478e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.40478e+07 beta=0.02
+ CLASS 1 MEAN 735.722 STDDEV 424.851 CLASS 2 MEAN 1320.49 STDDEV 200.37 CLASS 3 MEAN 1743.25 STDDEV 141.706
+Tanaka Iteration 2 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.43777e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.51336e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.51534e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.5154e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.5154e+07 beta=0.02
+ CLASS 1 MEAN 728.87 STDDEV 412.213 CLASS 2 MEAN 1318.47 STDDEV 179.829 CLASS 3 MEAN 1728.98 STDDEV 123.45
+Tanaka Iteration 3 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.52087e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.59097e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.59266e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.59271e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.59271e+07 beta=0.02
+ CLASS 1 MEAN 723.587 STDDEV 406.337 CLASS 2 MEAN 1316.33 STDDEV 166.575 CLASS 3 MEAN 1729.59 STDDEV 114.527
+Tanaka Iteration 4 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.57035e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.63683e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.63837e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.63842e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.63842e+07 beta=0.02
+ CLASS 1 MEAN 721.601 STDDEV 403.767 CLASS 2 MEAN 1316.08 STDDEV 158.428 CLASS 3 MEAN 1733.36 STDDEV 109.451
+Tanaka Iteration 5 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.59686e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.66135e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.66282e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.66286e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.66286e+07 beta=0.02
+ CLASS 1 MEAN 721.94 STDDEV 403.178 CLASS 2 MEAN 1317.3 STDDEV 153.719 CLASS 3 MEAN 1737.11 STDDEV 106.449
+Tanaka Iteration 6 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.6108e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.67416e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.67559e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.67563e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.67563e+07 beta=0.02
+ CLASS 1 MEAN 723.345 STDDEV 403.539 CLASS 2 MEAN 1319.17 STDDEV 151.094 CLASS 3 MEAN 1740.16 STDDEV 104.489
+Tanaka Iteration 7 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.618e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.68083e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.68225e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.68228e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.68229e+07 beta=0.02
+ CLASS 1 MEAN 724.997 STDDEV 404.229 CLASS 2 MEAN 1321.13 STDDEV 149.742 CLASS 3 MEAN 1742.59 STDDEV 103.015
+Tanaka Iteration 8 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.62165e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.68427e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.68569e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.68573e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.68573e+07 beta=0.02
+ CLASS 1 MEAN 726.52 STDDEV 404.978 CLASS 2 MEAN 1322.96 STDDEV 149.106 CLASS 3 MEAN 1744.6 STDDEV 102.016
+Tanaka Iteration 9 bias field 10
+Tanaka-inner-loop-iteration=0 MRFWeightsTotal=4.62375e+07 beta=0.02
+Tanaka-inner-loop-iteration=1 MRFWeightsTotal=4.68627e+07 beta=0.02
+Tanaka-inner-loop-iteration=2 MRFWeightsTotal=4.68768e+07 beta=0.02
+Tanaka-inner-loop-iteration=3 MRFWeightsTotal=4.68772e+07 beta=0.02
+Tanaka-inner-loop-iteration=4 MRFWeightsTotal=4.68772e+07 beta=0.02
+ CLASS 1 MEAN 727.774 STDDEV 405.614 CLASS 2 MEAN 1324.55 STDDEV 148.856 CLASS 3 MEAN 1746.23 STDDEV 101.148
+
+ tissue 1 516632
+ tissue 2 687602
+ tissue 3 621785
+ total tissue 1.82602e+06
+Mon Nov 20 12:02:38 CST 2023
+Extrapolating bias field from central region
+Cost is 5.1009e-06
+Cost is 5.16677e-07
+Mon Nov 20 12:03:05 CST 2023
+Performing brain extraction (using BET)
+Mon Nov 20 12:03:09 CST 2023:BiasFieldCorrection_T1wOnly.sh:  END: T1w BiasFieldCorrection
+Mon Nov 20 12:03:09 CST 2023:PreFreeSurferPipeline.sh: Creating one-step resampled version of {T1w,T2w}_acpc_dc outputs
+Mon Nov 20 12:04:32 CST 2023:PreFreeSurferPipeline.sh: Performing Atlas Registration to MNI152 (FLIRT and FNIRT)
+Mon Nov 20 12:04:32 CST 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Mon Nov 20 12:04:32 CST 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: FSLDIR: /isis/home/saida2/fsl
+Mon Nov 20 12:04:32 CST 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: START: AtlasRegistration to MNI152
+Mon Nov 20 12:11:03 CST 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: END: AtlasRegistration to MNI152
+Mon Nov 20 12:11:03 CST 2023:PreFreeSurferPipeline.sh: Completed!
+Running FreeSurferPipeline
+Running PostFreeSurferPipeline

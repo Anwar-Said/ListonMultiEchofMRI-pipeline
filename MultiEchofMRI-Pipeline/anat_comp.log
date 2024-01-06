@@ -1,0 +1,1458 @@
+
+Anatomical Preprocessing and Surface Registration Pipeline
+
+Running PreFreeSurferPipeline
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: arguments: --path=/isis/home/saida2/projects/Conorpipeline/data --subject=0 --t1=/isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T1w/T1w_1.nii.gz@/isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T1w/T1w_2.nii.gz@ --t2=/isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T2w/T2w_1.nii.gz@/isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T2w/T2w_2.nii.gz@ --t1template=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm.nii.gz --t1templatebrain=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain.nii.gz --t1template2mm=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm.nii.gz --t2template=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm.nii.gz --t2templatebrain=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm_brain.nii.gz --t2template2mm=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_2mm.nii.gz --templatemask=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain_mask.nii.gz --template2mmmask=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm_brain_mask_dil.nii.gz --brainsize=170 --fnirtconfig=/isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/T1_2_MNI152_2mm.cnf --fmapmag=NONE --fmapphase=NONE --fmapgeneralelectric=NONE --echodiff=NONE --SEPhaseNeg=NONE --SEPhasePos=NONE --seechospacing=NONE --seunwarpdir=NONE --t1samplespacing=NONE --t2samplespacing=NONE --unwarpdir=z --gdcoeffs=NONE --avgrdcmethod=NONE --topupconfig=NONE --processing-mode=HCPStyleData
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: StudyFolder: /isis/home/saida2/projects/Conorpipeline/data
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: Subject: 0
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T1wInputImages: /isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T1w/T1w_1.nii.gz@/isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T1w/T1w_2.nii.gz@
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T2wInputImages: /isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T2w/T2w_1.nii.gz@/isis/home/saida2/projects/Conorpipeline/data/0/anat/unprocessed/T2w/T2w_2.nii.gz@
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T1wTemplate: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T1wTemplateBrain: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T1wTemplate2mm: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T2wTemplate: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T2wTemplateBrain: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm_brain.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T2wTemplate2mm: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_2mm.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: TemplateMask: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm_brain_mask.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: Template2mmMask: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_2mm_brain_mask_dil.nii.gz
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: BrainSize: 170
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: FNIRTConfig: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/config/T1_2_MNI152_2mm.cnf
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: MagnitudeInputName: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: PhaseInputName: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: GEB0InputName: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: TE: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: SpinEchoPhaseEncodeNegative: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: SpinEchoPhaseEncodePositive: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: SEEchoSpacing: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: SEUnwarpDir: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T1wSampleSpacing: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T2wSampleSpacing: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: UnwarpDir: z
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: GradientDistortionCoeffs: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: AvgrdcSTRING: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: TopupConfig: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: BiasFieldSmoothingSigma: 
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: CustomBrain: NONE
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: ProcessingMode: HCPStyleData
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: UseJacobian: True
+========================================
+  DIRECTORY: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+    PRODUCT: HCP Pipeline Scripts
+    VERSION: Post-v4.7.0-MOD-21c0867
+     COMMIT: 21c0867c7f3a59554b9e28f5fe5cddd41e159170
+   MODIFIED: YES
+========================================
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: HCPPIPEDIR_Global: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/scripts
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: Platform Information Follows: 
+Linux jarvis 6.2.0-35-generic #35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Oct  6 10:23:26 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: Parsing Command Line Options
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T1wFolder: /isis/home/saida2/projects/Conorpipeline/data/0/T1w
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: T2wFolder: /isis/home/saida2/projects/Conorpipeline/data/0/T2w
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: AtlasSpaceFolder: /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T1w/xfms/
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T2w/xfms/
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/xfms/
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: Processing Modality: T1w
+Thu Oct 26 20:00:14 CDT 2023:PreFreeSurferPipeline.sh: NOT PERFORMING GRADIENT DISTORTION CORRECTION
+Thu Oct 26 20:00:15 CDT 2023:PreFreeSurferPipeline.sh: Averaging T1w Images
+Thu Oct 26 20:00:15 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T1w/AverageT1wImages
+Thu Oct 26 20:00:15 CDT 2023:PreFreeSurferPipeline.sh: PERFORMING SIMPLE AVERAGING
+Thu Oct 26 20:00:15 CDT 2023:AnatomicalAverage.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:00:15 CDT 2023:AnatomicalAverage.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:00:15 CDT 2023:AnatomicalAverage.sh: Images:  /isis/home/saida2/projects/Conorpipeline/data/0/T1w/T1w1_gdc /isis/home/saida2/projects/Conorpipeline/data/0/T1w/T1w2_gdc  Output: /isis/home/saida2/projects/Conorpipeline/data/0/T1w/T1w
+Final FOV is: 
+0.000000 208.000000 0.000000 256.000000 40.000000 170.000000 
+
+Final FOV is: 
+0.000000 208.000000 0.000000 256.000000 40.000000 170.000000 
+
+0.999759 0.000157 -0.002223 0.005877 
+-0.000444 0.999982 0.007088 -0.738350 
+0.002028 -0.006153 0.999972 0.083920 
+0.000000 0.000000 0.000000 1.000000 
+
+Thu Oct 26 20:02:49 CDT 2023:PreFreeSurferPipeline.sh: Aligning T1w image to /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T1_0.8mm.nii.gz to create native volume space
+Thu Oct 26 20:02:49 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T1w/ACPCAlignment
+Thu Oct 26 20:02:49 CDT 2023:ACPCAlignment.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:02:49 CDT 2023:ACPCAlignment.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:02:49 CDT 2023:ACPCAlignment.sh: START
+Final FOV is: 
+0.000000 208.000000 0.000000 256.000000 41.000000 170.000000 
+
+Thu Oct 26 20:03:29 CDT 2023:ACPCAlignment.sh: END
+Thu Oct 26 20:03:29 CDT 2023:PreFreeSurferPipeline.sh: Performing Brain Extraction using FNIRT-based Masking
+Thu Oct 26 20:03:29 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T1w/BrainExtraction_FNIRTbased
+Thu Oct 26 20:03:29 CDT 2023:BrainExtraction_FNIRTbased.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:03:29 CDT 2023:BrainExtraction_FNIRTbased.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:03:29 CDT 2023:BrainExtraction_FNIRTbased.sh: HCPPIPEDIR_Templates: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates
+Thu Oct 26 20:03:29 CDT 2023:BrainExtraction_FNIRTbased.sh: START: BrainExtraction_FNIRT
+Thu Oct 26 20:08:54 CDT 2023:BrainExtraction_FNIRTbased.sh: END: BrainExtraction_FNIRT
+Thu Oct 26 20:08:54 CDT 2023:PreFreeSurferPipeline.sh: Processing Modality: T2w
+Thu Oct 26 20:08:54 CDT 2023:PreFreeSurferPipeline.sh: NOT PERFORMING GRADIENT DISTORTION CORRECTION
+Thu Oct 26 20:08:55 CDT 2023:PreFreeSurferPipeline.sh: Averaging T2w Images
+Thu Oct 26 20:08:55 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T2w/AverageT2wImages
+Thu Oct 26 20:08:55 CDT 2023:PreFreeSurferPipeline.sh: PERFORMING SIMPLE AVERAGING
+Thu Oct 26 20:08:55 CDT 2023:AnatomicalAverage.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:08:55 CDT 2023:AnatomicalAverage.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:08:55 CDT 2023:AnatomicalAverage.sh: Images:  /isis/home/saida2/projects/Conorpipeline/data/0/T2w/T2w1_gdc /isis/home/saida2/projects/Conorpipeline/data/0/T2w/T2w2_gdc  Output: /isis/home/saida2/projects/Conorpipeline/data/0/T2w/T2w
+Final FOV is: 
+0.000000 208.000000 0.000000 256.000000 62.000000 170.000000 
+
+Final FOV is: 
+0.000000 208.000000 0.000000 256.000000 63.000000 170.000000 
+
+0.999469 0.002998 -0.002868 -0.284143 
+-0.002984 0.999717 0.005223 -0.423526 
+0.002684 -0.004841 1.000174 -0.636915 
+0.000000 0.000000 0.000000 1.000000 
+
+Thu Oct 26 20:11:24 CDT 2023:PreFreeSurferPipeline.sh: Aligning T2w image to /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates/MNI152_T2_0.8mm.nii.gz to create native volume space
+Thu Oct 26 20:11:24 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T2w/ACPCAlignment
+Thu Oct 26 20:11:24 CDT 2023:ACPCAlignment.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:11:24 CDT 2023:ACPCAlignment.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:11:24 CDT 2023:ACPCAlignment.sh: START
+Final FOV is: 
+0.000000 208.000000 0.000000 256.000000 85.000000 170.000000 
+
+Thu Oct 26 20:11:58 CDT 2023:ACPCAlignment.sh: END
+Thu Oct 26 20:11:58 CDT 2023:PreFreeSurferPipeline.sh: Performing Brain Extraction using FNIRT-based Masking
+Thu Oct 26 20:11:58 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T2w/BrainExtraction_FNIRTbased
+Thu Oct 26 20:11:58 CDT 2023:BrainExtraction_FNIRTbased.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:11:58 CDT 2023:BrainExtraction_FNIRTbased.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:11:58 CDT 2023:BrainExtraction_FNIRTbased.sh: HCPPIPEDIR_Templates: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/global/templates
+Thu Oct 26 20:11:58 CDT 2023:BrainExtraction_FNIRTbased.sh: START: BrainExtraction_FNIRT
+Thu Oct 26 20:17:13 CDT 2023:BrainExtraction_FNIRTbased.sh: END: BrainExtraction_FNIRT
+Thu Oct 26 20:17:13 CDT 2023:PreFreeSurferPipeline.sh: NOT PERFORMING READOUT DISTORTION CORRECTION
+Thu Oct 26 20:17:13 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T2w/T2wToT1wReg
+Thu Oct 26 20:17:13 CDT 2023:T2wToT1wReg.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:17:13 CDT 2023:T2wToT1wReg.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:17:13 CDT 2023:T2wToT1wReg.sh: START: T2w2T1Reg
+Running FAST segmentation
+FLIRT pre-alignment
+Running BBR
+0.110837 0.999999 -0.001590 -0.000001 0.000000 0.001590 0.999991 0.003853 0.000000 -0.000005 -0.003853 0.999993 0.000000 -0.138031 0.821087 0.382281 1.000000 
+Thu Oct 26 20:23:05 CDT 2023:T2wToT1wReg.sh: END: T2w2T1Reg
+Thu Oct 26 20:23:05 CDT 2023:PreFreeSurferPipeline.sh: Performing Bias Field Correction using sqrt(T1w x T2w)
+Thu Oct 26 20:23:05 CDT 2023:PreFreeSurferPipeline.sh: mkdir -p /isis/home/saida2/projects/Conorpipeline/data/0/T1w/BiasFieldCorrection_sqrtT1wXT2w
+Thu Oct 26 20:23:05 CDT 2023:BiasFieldCorrection_sqrtT1wXT2w.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:23:05 CDT 2023:BiasFieldCorrection_sqrtT1wXT2w.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:23:05 CDT 2023:BiasFieldCorrection_sqrtT1wXT2w.sh: CARET7DIR: /usr/bin
+Thu Oct 26 20:23:05 CDT 2023:BiasFieldCorrection_sqrtT1wXT2w.sh: START: BiasFieldCorrection
+0.217669
+0.979464
+.8706295
+Thu Oct 26 20:24:00 CDT 2023:BiasFieldCorrection_sqrtT1wXT2w.sh: END: BiasFieldCorrection
+Thu Oct 26 20:24:00 CDT 2023:PreFreeSurferPipeline.sh: Creating one-step resampled version of {T1w,T2w}_acpc_dc outputs
+Thu Oct 26 20:26:48 CDT 2023:PreFreeSurferPipeline.sh: Performing Atlas Registration to MNI152 (FLIRT and FNIRT)
+Thu Oct 26 20:26:48 CDT 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: HCPPIPEDIR: /isis/home/saida2/projects/Conorpipeline/HCPpipelines
+Thu Oct 26 20:26:48 CDT 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: FSLDIR: /isis/home/saida2/fsl
+Thu Oct 26 20:26:49 CDT 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: START: AtlasRegistration to MNI152
+Thu Oct 26 20:35:26 CDT 2023:AtlasRegistrationToMNI152_FLIRTandFNIRT.sh: END: AtlasRegistration to MNI152
+Thu Oct 26 20:35:26 CDT 2023:PreFreeSurferPipeline.sh: Completed!
+Running FreeSurferPipeline
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: We were not able to locate one of the following required tools:
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: recon-all.v6.hires, conf2hires, or longmc
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: 
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: To be able to run this script using the standard versions of these tools,
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: we added /isis/home/saida2/projects/Conorpipeline/HCPpipelines/FreeSurfer/custom to the beginning of the PATH.
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: 
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: If you intended to use some other version of these tools, please configure
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: your PATH before invoking this script, such that the tools you intended to
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: use can be found on the PATH.
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: 
+Thu Oct 26 20:35:27 CDT 2023:FreeSurferPipeline.sh: WARNING: PATH set to: /isis/home/saida2/projects/Conorpipeline/HCPpipelines/FreeSurfer/custom:/usr/bin:/isis/home/saida2/fsl/bin:/isis/home/saida2/fsl/share/fsl/bin:/usr/local/freesurfer/bin:/usr/local/msm:/usr/local/freesurfer/fsfast/bin:/usr/local/freesurfer/tktools:/usr/local/freesurfer/mni/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Running PostFreeSurferPipeline
+reading colortable from annotation file...
+colortable with 36 entries read (originally /autofs/space/tanha_002/users/greve/fsdev.build/average/colortable_desikan_killiany.txt)
+reading colortable from annotation file...
+colortable with 76 entries read (originally Simple_surface_labels2008.txt)
+
+WARNING: input sphere is either unusually irregular or not centered, inspect the input
+
+reading colortable from annotation file...
+colortable with 36 entries read (originally /autofs/space/tanha_002/users/greve/fsdev.build/average/colortable_desikan_killiany.txt)
+reading colortable from annotation file...
+colortable with 76 entries read (originally Simple_surface_labels2008.txt)
+
+WARNING: input sphere is either unusually irregular or not centered, inspect the input
+
+
+WARNING: conflicting key value for label 'R_bankssts' reassigned to key 36
+
+
+WARNING: conflicting key value for label 'R_caudalanteriorcingulate' reassigned to key 37
+
+
+WARNING: conflicting key value for label 'R_caudalmiddlefrontal' reassigned to key 38
+
+
+WARNING: conflicting key value for label 'R_corpuscallosum' reassigned to key 39
+
+
+WARNING: conflicting key value for label 'R_cuneus' reassigned to key 40
+
+
+WARNING: conflicting key value for label 'R_entorhinal' reassigned to key 41
+
+
+WARNING: conflicting key value for label 'R_fusiform' reassigned to key 42
+
+
+WARNING: conflicting key value for label 'R_inferiorparietal' reassigned to key 43
+
+
+WARNING: conflicting key value for label 'R_inferiortemporal' reassigned to key 44
+
+
+WARNING: conflicting key value for label 'R_isthmuscingulate' reassigned to key 45
+
+
+WARNING: conflicting key value for label 'R_lateraloccipital' reassigned to key 46
+
+
+WARNING: conflicting key value for label 'R_lateralorbitofrontal' reassigned to key 47
+
+
+WARNING: conflicting key value for label 'R_lingual' reassigned to key 48
+
+
+WARNING: conflicting key value for label 'R_medialorbitofrontal' reassigned to key 49
+
+
+WARNING: conflicting key value for label 'R_middletemporal' reassigned to key 50
+
+
+WARNING: conflicting key value for label 'R_parahippocampal' reassigned to key 51
+
+
+WARNING: conflicting key value for label 'R_paracentral' reassigned to key 52
+
+
+WARNING: conflicting key value for label 'R_parsopercularis' reassigned to key 53
+
+
+WARNING: conflicting key value for label 'R_parsorbitalis' reassigned to key 54
+
+
+WARNING: conflicting key value for label 'R_parstriangularis' reassigned to key 55
+
+
+WARNING: conflicting key value for label 'R_pericalcarine' reassigned to key 56
+
+
+WARNING: conflicting key value for label 'R_postcentral' reassigned to key 57
+
+
+WARNING: conflicting key value for label 'R_posteriorcingulate' reassigned to key 58
+
+
+WARNING: conflicting key value for label 'R_precentral' reassigned to key 59
+
+
+WARNING: conflicting key value for label 'R_precuneus' reassigned to key 60
+
+
+WARNING: conflicting key value for label 'R_rostralanteriorcingulate' reassigned to key 61
+
+
+WARNING: conflicting key value for label 'R_rostralmiddlefrontal' reassigned to key 62
+
+
+WARNING: conflicting key value for label 'R_superiorfrontal' reassigned to key 63
+
+
+WARNING: conflicting key value for label 'R_superiorparietal' reassigned to key 64
+
+
+WARNING: conflicting key value for label 'R_superiortemporal' reassigned to key 65
+
+
+WARNING: conflicting key value for label 'R_supramarginal' reassigned to key 66
+
+
+WARNING: conflicting key value for label 'R_frontalpole' reassigned to key 67
+
+
+WARNING: conflicting key value for label 'R_temporalpole' reassigned to key 68
+
+
+WARNING: conflicting key value for label 'R_transversetemporal' reassigned to key 69
+
+
+WARNING: conflicting key value for label 'R_insula' reassigned to key 70
+
+
+WARNING: conflicting key value for label 'R_G&S_frontomargin' reassigned to key 76
+
+
+WARNING: conflicting key value for label 'R_G&S_occipital_inf' reassigned to key 77
+
+
+WARNING: conflicting key value for label 'R_G&S_paracentral' reassigned to key 78
+
+
+WARNING: conflicting key value for label 'R_G&S_subcentral' reassigned to key 79
+
+
+WARNING: conflicting key value for label 'R_G&S_transv_frontopol' reassigned to key 80
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Ant' reassigned to key 81
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Mid-Ant' reassigned to key 82
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Mid-Post' reassigned to key 83
+
+
+WARNING: conflicting key value for label 'R_G_cingul-Post-dorsal' reassigned to key 84
+
+
+WARNING: conflicting key value for label 'R_G_cingul-Post-ventral' reassigned to key 85
+
+
+WARNING: conflicting key value for label 'R_G_cuneus' reassigned to key 86
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Opercular' reassigned to key 87
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Orbital' reassigned to key 88
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Triangul' reassigned to key 89
+
+
+WARNING: conflicting key value for label 'R_G_front_middle' reassigned to key 90
+
+
+WARNING: conflicting key value for label 'R_G_front_sup' reassigned to key 91
+
+
+WARNING: conflicting key value for label 'R_G_Ins_lg&S_cent_ins' reassigned to key 92
+
+
+WARNING: conflicting key value for label 'R_G_insular_short' reassigned to key 93
+
+
+WARNING: conflicting key value for label 'R_G_occipital_middle' reassigned to key 94
+
+
+WARNING: conflicting key value for label 'R_G_occipital_sup' reassigned to key 95
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_lat-fusifor' reassigned to key 96
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_med-Lingual' reassigned to key 97
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_med-Parahip' reassigned to key 98
+
+
+WARNING: conflicting key value for label 'R_G_orbital' reassigned to key 99
+
+
+WARNING: conflicting key value for label 'R_G_pariet_inf-Angular' reassigned to key 100
+
+
+WARNING: conflicting key value for label 'R_G_pariet_inf-Supramar' reassigned to key 101
+
+
+WARNING: conflicting key value for label 'R_G_parietal_sup' reassigned to key 102
+
+
+WARNING: conflicting key value for label 'R_G_postcentral' reassigned to key 103
+
+
+WARNING: conflicting key value for label 'R_G_precentral' reassigned to key 104
+
+
+WARNING: conflicting key value for label 'R_G_precuneus' reassigned to key 105
+
+
+WARNING: conflicting key value for label 'R_G_rectus' reassigned to key 106
+
+
+WARNING: conflicting key value for label 'R_G_subcallosal' reassigned to key 107
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-G_T_transv' reassigned to key 108
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Lateral' reassigned to key 109
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Plan_polar' reassigned to key 110
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Plan_tempo' reassigned to key 111
+
+
+WARNING: conflicting key value for label 'R_G_temporal_inf' reassigned to key 112
+
+
+WARNING: conflicting key value for label 'R_G_temporal_middle' reassigned to key 113
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-ant-Horizont' reassigned to key 114
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-ant-Vertical' reassigned to key 115
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-post' reassigned to key 116
+
+
+WARNING: conflicting key value for label 'R_Medial_wall' reassigned to key 117
+
+
+WARNING: conflicting key value for label 'R_Pole_occipital' reassigned to key 118
+
+
+WARNING: conflicting key value for label 'R_Pole_temporal' reassigned to key 119
+
+
+WARNING: conflicting key value for label 'R_S_calcarine' reassigned to key 120
+
+
+WARNING: conflicting key value for label 'R_S_central' reassigned to key 121
+
+
+WARNING: conflicting key value for label 'R_S_cingul-Marginalis' reassigned to key 122
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_ant' reassigned to key 123
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_inf' reassigned to key 124
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_sup' reassigned to key 125
+
+
+WARNING: conflicting key value for label 'R_S_collat_transv_ant' reassigned to key 126
+
+
+WARNING: conflicting key value for label 'R_S_collat_transv_post' reassigned to key 127
+
+
+WARNING: conflicting key value for label 'R_S_front_inf' reassigned to key 128
+
+
+WARNING: conflicting key value for label 'R_S_front_middle' reassigned to key 129
+
+
+WARNING: conflicting key value for label 'R_S_front_sup' reassigned to key 130
+
+
+WARNING: conflicting key value for label 'R_S_interm_prim-Jensen' reassigned to key 131
+
+
+WARNING: conflicting key value for label 'R_S_intrapariet&P_trans' reassigned to key 132
+
+
+WARNING: conflicting key value for label 'R_S_oc_middle&Lunatus' reassigned to key 133
+
+
+WARNING: conflicting key value for label 'R_S_oc_sup&transversal' reassigned to key 134
+
+
+WARNING: conflicting key value for label 'R_S_occipital_ant' reassigned to key 135
+
+
+WARNING: conflicting key value for label 'R_S_oc-temp_lat' reassigned to key 136
+
+
+WARNING: conflicting key value for label 'R_S_oc-temp_med&Lingual' reassigned to key 137
+
+
+WARNING: conflicting key value for label 'R_S_orbital_lateral' reassigned to key 138
+
+
+WARNING: conflicting key value for label 'R_S_orbital_med-olfact' reassigned to key 139
+
+
+WARNING: conflicting key value for label 'R_S_orbital-H_Shaped' reassigned to key 140
+
+
+WARNING: conflicting key value for label 'R_S_parieto_occipital' reassigned to key 141
+
+
+WARNING: conflicting key value for label 'R_S_pericallosal' reassigned to key 142
+
+
+WARNING: conflicting key value for label 'R_S_postcentral' reassigned to key 143
+
+
+WARNING: conflicting key value for label 'R_S_precentral-inf-part' reassigned to key 144
+
+
+WARNING: conflicting key value for label 'R_S_precentral-sup-part' reassigned to key 145
+
+
+WARNING: conflicting key value for label 'R_S_suborbital' reassigned to key 146
+
+
+WARNING: conflicting key value for label 'R_S_subparietal' reassigned to key 147
+
+
+WARNING: conflicting key value for label 'R_S_temporal_inf' reassigned to key 148
+
+
+WARNING: conflicting key value for label 'R_S_temporal_sup' reassigned to key 149
+
+
+WARNING: conflicting key value for label 'R_S_temporal_transverse' reassigned to key 150
+
+
+WARNING: conflicting key value for label 'R_bankssts' reassigned to key 36
+
+
+WARNING: conflicting key value for label 'R_caudalanteriorcingulate' reassigned to key 37
+
+
+WARNING: conflicting key value for label 'R_caudalmiddlefrontal' reassigned to key 38
+
+
+WARNING: conflicting key value for label 'R_corpuscallosum' reassigned to key 39
+
+
+WARNING: conflicting key value for label 'R_cuneus' reassigned to key 40
+
+
+WARNING: conflicting key value for label 'R_entorhinal' reassigned to key 41
+
+
+WARNING: conflicting key value for label 'R_fusiform' reassigned to key 42
+
+
+WARNING: conflicting key value for label 'R_inferiorparietal' reassigned to key 43
+
+
+WARNING: conflicting key value for label 'R_inferiortemporal' reassigned to key 44
+
+
+WARNING: conflicting key value for label 'R_isthmuscingulate' reassigned to key 45
+
+
+WARNING: conflicting key value for label 'R_lateraloccipital' reassigned to key 46
+
+
+WARNING: conflicting key value for label 'R_lateralorbitofrontal' reassigned to key 47
+
+
+WARNING: conflicting key value for label 'R_lingual' reassigned to key 48
+
+
+WARNING: conflicting key value for label 'R_medialorbitofrontal' reassigned to key 49
+
+
+WARNING: conflicting key value for label 'R_middletemporal' reassigned to key 50
+
+
+WARNING: conflicting key value for label 'R_parahippocampal' reassigned to key 51
+
+
+WARNING: conflicting key value for label 'R_paracentral' reassigned to key 52
+
+
+WARNING: conflicting key value for label 'R_parsopercularis' reassigned to key 53
+
+
+WARNING: conflicting key value for label 'R_parsorbitalis' reassigned to key 54
+
+
+WARNING: conflicting key value for label 'R_parstriangularis' reassigned to key 55
+
+
+WARNING: conflicting key value for label 'R_pericalcarine' reassigned to key 56
+
+
+WARNING: conflicting key value for label 'R_postcentral' reassigned to key 57
+
+
+WARNING: conflicting key value for label 'R_posteriorcingulate' reassigned to key 58
+
+
+WARNING: conflicting key value for label 'R_precentral' reassigned to key 59
+
+
+WARNING: conflicting key value for label 'R_precuneus' reassigned to key 60
+
+
+WARNING: conflicting key value for label 'R_rostralanteriorcingulate' reassigned to key 61
+
+
+WARNING: conflicting key value for label 'R_rostralmiddlefrontal' reassigned to key 62
+
+
+WARNING: conflicting key value for label 'R_superiorfrontal' reassigned to key 63
+
+
+WARNING: conflicting key value for label 'R_superiorparietal' reassigned to key 64
+
+
+WARNING: conflicting key value for label 'R_superiortemporal' reassigned to key 65
+
+
+WARNING: conflicting key value for label 'R_supramarginal' reassigned to key 66
+
+
+WARNING: conflicting key value for label 'R_frontalpole' reassigned to key 67
+
+
+WARNING: conflicting key value for label 'R_temporalpole' reassigned to key 68
+
+
+WARNING: conflicting key value for label 'R_transversetemporal' reassigned to key 69
+
+
+WARNING: conflicting key value for label 'R_insula' reassigned to key 70
+
+
+WARNING: conflicting key value for label 'R_G&S_frontomargin' reassigned to key 76
+
+
+WARNING: conflicting key value for label 'R_G&S_occipital_inf' reassigned to key 77
+
+
+WARNING: conflicting key value for label 'R_G&S_paracentral' reassigned to key 78
+
+
+WARNING: conflicting key value for label 'R_G&S_subcentral' reassigned to key 79
+
+
+WARNING: conflicting key value for label 'R_G&S_transv_frontopol' reassigned to key 80
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Ant' reassigned to key 81
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Mid-Ant' reassigned to key 82
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Mid-Post' reassigned to key 83
+
+
+WARNING: conflicting key value for label 'R_G_cingul-Post-dorsal' reassigned to key 84
+
+
+WARNING: conflicting key value for label 'R_G_cingul-Post-ventral' reassigned to key 85
+
+
+WARNING: conflicting key value for label 'R_G_cuneus' reassigned to key 86
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Opercular' reassigned to key 87
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Orbital' reassigned to key 88
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Triangul' reassigned to key 89
+
+
+WARNING: conflicting key value for label 'R_G_front_middle' reassigned to key 90
+
+
+WARNING: conflicting key value for label 'R_G_front_sup' reassigned to key 91
+
+
+WARNING: conflicting key value for label 'R_G_Ins_lg&S_cent_ins' reassigned to key 92
+
+
+WARNING: conflicting key value for label 'R_G_insular_short' reassigned to key 93
+
+
+WARNING: conflicting key value for label 'R_G_occipital_middle' reassigned to key 94
+
+
+WARNING: conflicting key value for label 'R_G_occipital_sup' reassigned to key 95
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_lat-fusifor' reassigned to key 96
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_med-Lingual' reassigned to key 97
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_med-Parahip' reassigned to key 98
+
+
+WARNING: conflicting key value for label 'R_G_orbital' reassigned to key 99
+
+
+WARNING: conflicting key value for label 'R_G_pariet_inf-Angular' reassigned to key 100
+
+
+WARNING: conflicting key value for label 'R_G_pariet_inf-Supramar' reassigned to key 101
+
+
+WARNING: conflicting key value for label 'R_G_parietal_sup' reassigned to key 102
+
+
+WARNING: conflicting key value for label 'R_G_postcentral' reassigned to key 103
+
+
+WARNING: conflicting key value for label 'R_G_precentral' reassigned to key 104
+
+
+WARNING: conflicting key value for label 'R_G_precuneus' reassigned to key 105
+
+
+WARNING: conflicting key value for label 'R_G_rectus' reassigned to key 106
+
+
+WARNING: conflicting key value for label 'R_G_subcallosal' reassigned to key 107
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-G_T_transv' reassigned to key 108
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Lateral' reassigned to key 109
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Plan_polar' reassigned to key 110
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Plan_tempo' reassigned to key 111
+
+
+WARNING: conflicting key value for label 'R_G_temporal_inf' reassigned to key 112
+
+
+WARNING: conflicting key value for label 'R_G_temporal_middle' reassigned to key 113
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-ant-Horizont' reassigned to key 114
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-ant-Vertical' reassigned to key 115
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-post' reassigned to key 116
+
+
+WARNING: conflicting key value for label 'R_Medial_wall' reassigned to key 117
+
+
+WARNING: conflicting key value for label 'R_Pole_occipital' reassigned to key 118
+
+
+WARNING: conflicting key value for label 'R_Pole_temporal' reassigned to key 119
+
+
+WARNING: conflicting key value for label 'R_S_calcarine' reassigned to key 120
+
+
+WARNING: conflicting key value for label 'R_S_central' reassigned to key 121
+
+
+WARNING: conflicting key value for label 'R_S_cingul-Marginalis' reassigned to key 122
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_ant' reassigned to key 123
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_inf' reassigned to key 124
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_sup' reassigned to key 125
+
+
+WARNING: conflicting key value for label 'R_S_collat_transv_ant' reassigned to key 126
+
+
+WARNING: conflicting key value for label 'R_S_collat_transv_post' reassigned to key 127
+
+
+WARNING: conflicting key value for label 'R_S_front_inf' reassigned to key 128
+
+
+WARNING: conflicting key value for label 'R_S_front_middle' reassigned to key 129
+
+
+WARNING: conflicting key value for label 'R_S_front_sup' reassigned to key 130
+
+
+WARNING: conflicting key value for label 'R_S_interm_prim-Jensen' reassigned to key 131
+
+
+WARNING: conflicting key value for label 'R_S_intrapariet&P_trans' reassigned to key 132
+
+
+WARNING: conflicting key value for label 'R_S_oc_middle&Lunatus' reassigned to key 133
+
+
+WARNING: conflicting key value for label 'R_S_oc_sup&transversal' reassigned to key 134
+
+
+WARNING: conflicting key value for label 'R_S_occipital_ant' reassigned to key 135
+
+
+WARNING: conflicting key value for label 'R_S_oc-temp_lat' reassigned to key 136
+
+
+WARNING: conflicting key value for label 'R_S_oc-temp_med&Lingual' reassigned to key 137
+
+
+WARNING: conflicting key value for label 'R_S_orbital_lateral' reassigned to key 138
+
+
+WARNING: conflicting key value for label 'R_S_orbital_med-olfact' reassigned to key 139
+
+
+WARNING: conflicting key value for label 'R_S_orbital-H_Shaped' reassigned to key 140
+
+
+WARNING: conflicting key value for label 'R_S_parieto_occipital' reassigned to key 141
+
+
+WARNING: conflicting key value for label 'R_S_pericallosal' reassigned to key 142
+
+
+WARNING: conflicting key value for label 'R_S_postcentral' reassigned to key 143
+
+
+WARNING: conflicting key value for label 'R_S_precentral-inf-part' reassigned to key 144
+
+
+WARNING: conflicting key value for label 'R_S_precentral-sup-part' reassigned to key 145
+
+
+WARNING: conflicting key value for label 'R_S_suborbital' reassigned to key 146
+
+
+WARNING: conflicting key value for label 'R_S_subparietal' reassigned to key 147
+
+
+WARNING: conflicting key value for label 'R_S_temporal_inf' reassigned to key 148
+
+
+WARNING: conflicting key value for label 'R_S_temporal_sup' reassigned to key 149
+
+
+WARNING: conflicting key value for label 'R_S_temporal_transverse' reassigned to key 150
+
+
+WARNING: conflicting key value for label 'R_bankssts' reassigned to key 36
+
+
+WARNING: conflicting key value for label 'R_caudalanteriorcingulate' reassigned to key 37
+
+
+WARNING: conflicting key value for label 'R_caudalmiddlefrontal' reassigned to key 38
+
+
+WARNING: conflicting key value for label 'R_corpuscallosum' reassigned to key 39
+
+
+WARNING: conflicting key value for label 'R_cuneus' reassigned to key 40
+
+
+WARNING: conflicting key value for label 'R_entorhinal' reassigned to key 41
+
+
+WARNING: conflicting key value for label 'R_fusiform' reassigned to key 42
+
+
+WARNING: conflicting key value for label 'R_inferiorparietal' reassigned to key 43
+
+
+WARNING: conflicting key value for label 'R_inferiortemporal' reassigned to key 44
+
+
+WARNING: conflicting key value for label 'R_isthmuscingulate' reassigned to key 45
+
+
+WARNING: conflicting key value for label 'R_lateraloccipital' reassigned to key 46
+
+
+WARNING: conflicting key value for label 'R_lateralorbitofrontal' reassigned to key 47
+
+
+WARNING: conflicting key value for label 'R_lingual' reassigned to key 48
+
+
+WARNING: conflicting key value for label 'R_medialorbitofrontal' reassigned to key 49
+
+
+WARNING: conflicting key value for label 'R_middletemporal' reassigned to key 50
+
+
+WARNING: conflicting key value for label 'R_parahippocampal' reassigned to key 51
+
+
+WARNING: conflicting key value for label 'R_paracentral' reassigned to key 52
+
+
+WARNING: conflicting key value for label 'R_parsopercularis' reassigned to key 53
+
+
+WARNING: conflicting key value for label 'R_parsorbitalis' reassigned to key 54
+
+
+WARNING: conflicting key value for label 'R_parstriangularis' reassigned to key 55
+
+
+WARNING: conflicting key value for label 'R_pericalcarine' reassigned to key 56
+
+
+WARNING: conflicting key value for label 'R_postcentral' reassigned to key 57
+
+
+WARNING: conflicting key value for label 'R_posteriorcingulate' reassigned to key 58
+
+
+WARNING: conflicting key value for label 'R_precentral' reassigned to key 59
+
+
+WARNING: conflicting key value for label 'R_precuneus' reassigned to key 60
+
+
+WARNING: conflicting key value for label 'R_rostralanteriorcingulate' reassigned to key 61
+
+
+WARNING: conflicting key value for label 'R_rostralmiddlefrontal' reassigned to key 62
+
+
+WARNING: conflicting key value for label 'R_superiorfrontal' reassigned to key 63
+
+
+WARNING: conflicting key value for label 'R_superiorparietal' reassigned to key 64
+
+
+WARNING: conflicting key value for label 'R_superiortemporal' reassigned to key 65
+
+
+WARNING: conflicting key value for label 'R_supramarginal' reassigned to key 66
+
+
+WARNING: conflicting key value for label 'R_frontalpole' reassigned to key 67
+
+
+WARNING: conflicting key value for label 'R_temporalpole' reassigned to key 68
+
+
+WARNING: conflicting key value for label 'R_transversetemporal' reassigned to key 69
+
+
+WARNING: conflicting key value for label 'R_insula' reassigned to key 70
+
+
+WARNING: conflicting key value for label 'R_G&S_frontomargin' reassigned to key 76
+
+
+WARNING: conflicting key value for label 'R_G&S_occipital_inf' reassigned to key 77
+
+
+WARNING: conflicting key value for label 'R_G&S_paracentral' reassigned to key 78
+
+
+WARNING: conflicting key value for label 'R_G&S_subcentral' reassigned to key 79
+
+
+WARNING: conflicting key value for label 'R_G&S_transv_frontopol' reassigned to key 80
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Ant' reassigned to key 81
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Mid-Ant' reassigned to key 82
+
+
+WARNING: conflicting key value for label 'R_G&S_cingul-Mid-Post' reassigned to key 83
+
+
+WARNING: conflicting key value for label 'R_G_cingul-Post-dorsal' reassigned to key 84
+
+
+WARNING: conflicting key value for label 'R_G_cingul-Post-ventral' reassigned to key 85
+
+
+WARNING: conflicting key value for label 'R_G_cuneus' reassigned to key 86
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Opercular' reassigned to key 87
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Orbital' reassigned to key 88
+
+
+WARNING: conflicting key value for label 'R_G_front_inf-Triangul' reassigned to key 89
+
+
+WARNING: conflicting key value for label 'R_G_front_middle' reassigned to key 90
+
+
+WARNING: conflicting key value for label 'R_G_front_sup' reassigned to key 91
+
+
+WARNING: conflicting key value for label 'R_G_Ins_lg&S_cent_ins' reassigned to key 92
+
+
+WARNING: conflicting key value for label 'R_G_insular_short' reassigned to key 93
+
+
+WARNING: conflicting key value for label 'R_G_occipital_middle' reassigned to key 94
+
+
+WARNING: conflicting key value for label 'R_G_occipital_sup' reassigned to key 95
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_lat-fusifor' reassigned to key 96
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_med-Lingual' reassigned to key 97
+
+
+WARNING: conflicting key value for label 'R_G_oc-temp_med-Parahip' reassigned to key 98
+
+
+WARNING: conflicting key value for label 'R_G_orbital' reassigned to key 99
+
+
+WARNING: conflicting key value for label 'R_G_pariet_inf-Angular' reassigned to key 100
+
+
+WARNING: conflicting key value for label 'R_G_pariet_inf-Supramar' reassigned to key 101
+
+
+WARNING: conflicting key value for label 'R_G_parietal_sup' reassigned to key 102
+
+
+WARNING: conflicting key value for label 'R_G_postcentral' reassigned to key 103
+
+
+WARNING: conflicting key value for label 'R_G_precentral' reassigned to key 104
+
+
+WARNING: conflicting key value for label 'R_G_precuneus' reassigned to key 105
+
+
+WARNING: conflicting key value for label 'R_G_rectus' reassigned to key 106
+
+
+WARNING: conflicting key value for label 'R_G_subcallosal' reassigned to key 107
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-G_T_transv' reassigned to key 108
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Lateral' reassigned to key 109
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Plan_polar' reassigned to key 110
+
+
+WARNING: conflicting key value for label 'R_G_temp_sup-Plan_tempo' reassigned to key 111
+
+
+WARNING: conflicting key value for label 'R_G_temporal_inf' reassigned to key 112
+
+
+WARNING: conflicting key value for label 'R_G_temporal_middle' reassigned to key 113
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-ant-Horizont' reassigned to key 114
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-ant-Vertical' reassigned to key 115
+
+
+WARNING: conflicting key value for label 'R_Lat_Fis-post' reassigned to key 116
+
+
+WARNING: conflicting key value for label 'R_Medial_wall' reassigned to key 117
+
+
+WARNING: conflicting key value for label 'R_Pole_occipital' reassigned to key 118
+
+
+WARNING: conflicting key value for label 'R_Pole_temporal' reassigned to key 119
+
+
+WARNING: conflicting key value for label 'R_S_calcarine' reassigned to key 120
+
+
+WARNING: conflicting key value for label 'R_S_central' reassigned to key 121
+
+
+WARNING: conflicting key value for label 'R_S_cingul-Marginalis' reassigned to key 122
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_ant' reassigned to key 123
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_inf' reassigned to key 124
+
+
+WARNING: conflicting key value for label 'R_S_circular_insula_sup' reassigned to key 125
+
+
+WARNING: conflicting key value for label 'R_S_collat_transv_ant' reassigned to key 126
+
+
+WARNING: conflicting key value for label 'R_S_collat_transv_post' reassigned to key 127
+
+
+WARNING: conflicting key value for label 'R_S_front_inf' reassigned to key 128
+
+
+WARNING: conflicting key value for label 'R_S_front_middle' reassigned to key 129
+
+
+WARNING: conflicting key value for label 'R_S_front_sup' reassigned to key 130
+
+
+WARNING: conflicting key value for label 'R_S_interm_prim-Jensen' reassigned to key 131
+
+
+WARNING: conflicting key value for label 'R_S_intrapariet&P_trans' reassigned to key 132
+
+
+WARNING: conflicting key value for label 'R_S_oc_middle&Lunatus' reassigned to key 133
+
+
+WARNING: conflicting key value for label 'R_S_oc_sup&transversal' reassigned to key 134
+
+
+WARNING: conflicting key value for label 'R_S_occipital_ant' reassigned to key 135
+
+
+WARNING: conflicting key value for label 'R_S_oc-temp_lat' reassigned to key 136
+
+
+WARNING: conflicting key value for label 'R_S_oc-temp_med&Lingual' reassigned to key 137
+
+
+WARNING: conflicting key value for label 'R_S_orbital_lateral' reassigned to key 138
+
+
+WARNING: conflicting key value for label 'R_S_orbital_med-olfact' reassigned to key 139
+
+
+WARNING: conflicting key value for label 'R_S_orbital-H_Shaped' reassigned to key 140
+
+
+WARNING: conflicting key value for label 'R_S_parieto_occipital' reassigned to key 141
+
+
+WARNING: conflicting key value for label 'R_S_pericallosal' reassigned to key 142
+
+
+WARNING: conflicting key value for label 'R_S_postcentral' reassigned to key 143
+
+
+WARNING: conflicting key value for label 'R_S_precentral-inf-part' reassigned to key 144
+
+
+WARNING: conflicting key value for label 'R_S_precentral-sup-part' reassigned to key 145
+
+
+WARNING: conflicting key value for label 'R_S_suborbital' reassigned to key 146
+
+
+WARNING: conflicting key value for label 'R_S_subparietal' reassigned to key 147
+
+
+WARNING: conflicting key value for label 'R_S_temporal_inf' reassigned to key 148
+
+
+WARNING: conflicting key value for label 'R_S_temporal_sup' reassigned to key 149
+
+
+WARNING: conflicting key value for label 'R_S_temporal_transverse' reassigned to key 150
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.white.164k_fs_LR.surf.gii was 0.078594 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.midthickness.164k_fs_LR.surf.gii was 0.054647 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.pial.164k_fs_LR.surf.gii was 0.051927 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.inflated.164k_fs_LR.surf.gii was 0.052352 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.very_inflated.164k_fs_LR.surf.gii was 0.052886 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.white.164k_fs_LR.surf.gii was 0.074405 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.midthickness.164k_fs_LR.surf.gii was 0.054194 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.pial.164k_fs_LR.surf.gii was 0.051978 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.inflated.164k_fs_LR.surf.gii was 0.051629 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.very_inflated.164k_fs_LR.surf.gii was 0.051253 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.aparc.164k_fs_LR.dlabel.nii was 0.097362 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.aparc.a2009s.164k_fs_LR.dlabel.nii was 0.100342 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.sulc.164k_fs_LR.dscalar.nii was 0.09903 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.thickness.164k_fs_LR.dscalar.nii was 0.088687 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.curvature.164k_fs_LR.dscalar.nii was 0.089089 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.MyelinMap_BC.164k_fs_LR.dscalar.nii was 0.087886 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.SmoothedMyelinMap_BC.164k_fs_LR.dscalar.nii was 0.089241 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/S1200.MyelinMap_BC_MSMAll.164k_fs_LR.dscalar.nii was 0.088557 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/S1200.sulc_MSMAll.164k_fs_LR.dscalar.nii was 0.09625 seconds.
+
+
+Info: Time to color volume data is 0.282 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/T2w_restore.nii.gz was 0.554958 seconds.
+
+
+Info: Time to color volume data is 0.258 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/T1w_restore.nii.gz was 0.543135 seconds.
+
+
+Info: Time to color volume data is 0.111 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/aparc+aseg.nii.gz was 0.382415 seconds.
+
+
+Info: Time to color volume data is 0.115 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/aparc.a2009s+aseg.nii.gz was 0.392264 seconds.
+
+
+Info: Time to color volume data is 0.116 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/wmparc.nii.gz was 0.414677 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.midthickness.164k_fs_LR.surf.gii was 0.07727 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.inflated.164k_fs_LR.surf.gii was 0.055678 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.very_inflated.164k_fs_LR.surf.gii was 0.052301 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.sphere.164k_fs_LR.surf.gii was 0.053607 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.midthickness.164k_fs_LR.surf.gii was 0.074054 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.inflated.164k_fs_LR.surf.gii was 0.054342 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.very_inflated.164k_fs_LR.surf.gii was 0.052015 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.sphere.164k_fs_LR.surf.gii was 0.05286 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.sulc.164k_fs_LR.dscalar.nii was 0.103796 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.curvature.164k_fs_LR.dscalar.nii was 0.097439 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.MyelinMap_BC.164k_fs_LR.dscalar.nii was 0.087688 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.SmoothedMyelinMap_BC.164k_fs_LR.dscalar.nii was 0.089586 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.StrainJ_MSMSulc.164k_fs_LR.dscalar.nii was 0.099296 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.StrainR_MSMSulc.164k_fs_LR.dscalar.nii was 0.099224 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/0.NonlinearRegJacobians_FNIRT.164k_fs_LR.dscalar.nii was 0.100876 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.StrainJ_FS.164k_fs_LR.dscalar.nii was 0.100195 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.StrainR_FS.164k_fs_LR.dscalar.nii was 0.105981 seconds.
+
+
+Info: Time to color volume data is 0.265 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/T1w_restore.nii.gz was 0.536377 seconds.
+
+
+Info: Time to color volume data is 0.275 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/T2w_restore.nii.gz was 0.552656 seconds.
+
+
+Info: Time to color volume data is 0.256 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/MNI152_T1_0.8mm.nii.gz was 0.367926 seconds.
+
+
+Info: Time to color volume data is 0.017 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/0.NonlinearRegJacobians_log2.nii.gz was 0.035668 seconds.
+
+ERRORS loading scene, output image may be incorrect.
+NAME OF FILE: 0.StrainJ_MSMAll.164k_fs_LR.dscalar.nii
+PATH TO FILE: /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear
+
+File not found:
+NAME OF FILE: 0.StrainR_MSMAll.164k_fs_LR.dscalar.nii
+PATH TO FILE: /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear
+
+File not found:
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.L.midthickness.164k_fs_LR.surf.gii was 0.077108 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/0.R.midthickness.164k_fs_LR.surf.gii was 0.076734 seconds.
+
+
+Info: Time to color volume data is 0.283 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/T2w_restore.nii.gz was 0.553851 seconds.
+
+
+Info: Time to color volume data is 0.258 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/T1w_restore.nii.gz was 0.533152 seconds.
+
+
+Info: Time to color volume data is 0.247 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/MNI152_T1_0.8mm.nii.gz was 0.360507 seconds.
+
+
+Info: Time to color volume data is 0.017 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/0.NonlinearRegJacobians_log2.nii.gz was 0.035345 seconds.
+
+
+Info: Time to color volume data is 0.212 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/StructuralQC/0.T1w_acpc_dc_restore_to_MNILinear.nii.gz was 0.463253 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.L.inflated.native.surf.gii was 0.079008 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.L.midthickness.native.surf.gii was 0.04975 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.L.pial.native.surf.gii was 0.048846 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.L.very_inflated.native.surf.gii was 0.048152 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.L.white.native.surf.gii was 0.047321 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.R.inflated.native.surf.gii was 0.068061 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.R.midthickness.native.surf.gii was 0.049471 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.R.pial.native.surf.gii was 0.050639 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.R.very_inflated.native.surf.gii was 0.046992 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/Native/0.R.white.native.surf.gii was 0.046806 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/Native/0.aparc.native.dlabel.nii was 0.078872 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/Native/0.aparc.a2009s.native.dlabel.nii was 0.083575 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/Native/0.curvature.native.dscalar.nii was 0.073438 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/Native/0.sulc.native.dscalar.nii was 0.076157 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/Native/0.thickness.native.dscalar.nii was 0.071639 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/Native/0.MyelinMap_BC.native.dscalar.nii was 0.072231 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/MNINonLinear/Native/0.SmoothedMyelinMap_BC.native.dscalar.nii was 0.073085 seconds.
+
+
+Info: Time to color volume data is 0.291 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/T2w_acpc_dc_restore.nii.gz was 0.56845 seconds.
+
+
+Info: Time to color volume data is 0.276 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/T1w_acpc_dc_restore.nii.gz was 0.552929 seconds.
+
+
+Info: Time to color volume data is 0.109 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/aparc+aseg.nii.gz was 0.386328 seconds.
+
+
+Info: Time to color volume data is 0.113 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/aparc.a2009s+aseg.nii.gz was 0.396478 seconds.
+
+
+Info: Time to color volume data is 0.113 seconds.
+
+
+Info: Time to read /isis/home/saida2/projects/Conorpipeline/data/0/T1w/wmparc.nii.gz was 0.413168 seconds.
+

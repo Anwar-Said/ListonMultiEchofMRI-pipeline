@@ -1,0 +1,81 @@
+
+PreFreeSurferPipeline.sh: Prepares raw data for running the FreeSurfer HCP pipeline
+
+Usage: PreFreeSurferPipeline.sh PARAMETER ...
+
+A parameter enclosed in [ ] is optional.
+All other parameters must be specified.
+Anything enclosed in < > is a placeholder for a user supplied value.
+
+  [--help or -h] - show this usage information and exit
+   --path=<path> - Path to study data folder (required)  Used with --subject input to create full path to root  directory for all outputs generated as path/subject)
+   --subject=<subject> - Subject ID (required)  Used with --path input to create full path to root  directory for all outputs generated as path/subject
+   --t1=<T1> - An @ symbol separated list of full paths to T1-weighted  (T1w) structural images for the subject (required)
+   --t2=<T2> - An @ symbol separated list of full paths to T2-weighted  (T2w) structural images for the subject (required for   hcp-style data, can be NONE for legacy-style data, 
+        see --processing-mode option)
+   --t1template=<file_path> - MNI T1w template
+   --t1templatebrain=<file_path> - Brain extracted MNI T1wTemplate
+   --t1template2mm=<file_path> - MNI 2mm T1wTemplate
+   --t2template=<file_path> - MNI T2w template
+   --t2templatebrain=<file_path> - Brain extracted MNI T2wTemplate
+   --t2template2mm=<file_path> - MNI 2mm T2wTemplate
+   --templatemask=<file_path> - Brain mask MNI Template
+   --template2mmmask=<file_path> - Brain mask MNI 2mm Template
+   --brainsize=<size_value> - Brain size estimate in mm, 150 for humans
+   --fnirtconfig=<file_path> - FNIRT 2mm T1w Configuration file
+  [--fmapmag=<file_path>] - Siemens/Philips Gradient Echo Fieldmap magnitude file
+  [--fmapphase=<file_path>] - Siemens/Philips Gradient Echo Fieldmap phase file
+  [--fmapgeneralelectric=<file_path>] - General Electric Gradient Echo Field Map file  Two volumes in one file  1. field map in deg  2. magnitude
+  [--echodiff=<delta_TE>] - Delta TE in ms for field map or 'NONE' if  not used
+  [--SEPhaseNeg=<<file_path>_or__NONE>] - For spin echo field map, path to volume with  a negative phase encoding direction (LR in  HCP data), set to 'NONE' if not using Spin 
+        Echo Field Maps
+  [--SEPhasePos=<<file_path>_or__NONE>] - For spin echo field map, path to volume with  a positive phase encoding direction (RL in  HCP data), set to 'NONE' if not using Spin 
+        Echo Field Maps
+   --seechospacing=<seconds> - Effective Echo Spacing of Spin Echo Field Map,  (in seconds) or 'NONE' if not used
+   --seunwarpdir=<{x,y,NONE} OR {i,j,NONE}> - Phase encoding direction (according to the *voxel* axes)  of the spin echo field map.   (Only applies when using a spin echo field
+        map.)
+   --t1samplespacing=<seconds> - T1 image sample spacing, 'NONE' if not used
+   --t2samplespacing=<seconds> - T2 image sample spacing, 'NONE' if not used
+   --unwarpdir=<{x,y,z,x-,y-,z-} OR {i,j,k,i-,j-,k-}> - Readout direction of the T1w and T2w images (according to the *voxel axes)  (Used with either a gradient echo field map  
+        or a spin echo field map)
+   --gdcoeffs=<file_path> - File containing gradient distortion  coefficients, Set to 'NONE' to turn off
+   --avgrdcmethod=<avgrdcmethod> - Averaging and readout distortion correction method.   See below for supported values. 
+          'NONE' 
+              average any repeats with no readout distortion correction
+        
+          'TOPUP' 
+              average any repeats and use Spin Echo Field Maps for readout
+              distortion correction
+        
+          'PhilipsFieldMap' 
+              average any repeats and use Philips specific Gradient Echo
+              Field Maps for readout distortion correction
+        
+          'GeneralElectricFieldMap' 
+              average any repeats and use General Electric specific Gradient
+              Echo Field Maps for readout distortion correction
+        
+          'SiemensFieldMap' 
+              average any repeats and use Siemens specific Gradient Echo
+              Field Maps for readout distortion correction
+        
+          'FIELDMAP' 
+              equivalent to 'SiemensFieldMap' (preferred)
+              This option value is maintained for backward compatibility.
+  [--topupconfig=<file_path>] - Configuration file for topup or 'NONE' if not used
+  [--bfsigma=<value>] - Bias Field Smoothing Sigma (optional)
+  [--custombrain=<NONE_or_MASK_or_CUSTOM>] - If PreFreeSurfer has been run before and you have created a custom  brain mask saved as
+        '<subject>/T1w/custom_acpc_dc_restore_mask.nii.gz', specify 'MASK'.   If PreFreeSurfer has been run before and you have created custom structural images, e.g.:  
+        - '<subject>/T1w/T1w_acpc_dc_restore_brain.nii.gz' 
+        - '<subject>/T1w/T1w_acpc_dc_restore.nii.gz' 
+        - '<subject>/T1w/T2w_acpc_dc_restore_brain.nii.gz' 
+        - '<subject>/T1w/T2w_acpc_dc_restore.nii.gz' 
+          to be used when peforming MNI152 Atlas registration, specify 'CUSTOM'.  When 'MASK' or 'CUSTOM' is specified, only the AtlasRegistration step is run.  If the parameter
+        is omitted or set to NONE (the default),   standard image processing will take place.  If using 'MASK' or 'CUSTOM', the data still needs to be staged properly by   running
+        FreeSurfer and PostFreeSurfer afterwards.  NOTE: This option allows manual correction of brain images in cases when they  were not successfully processed and/or masked by
+        the regular use of the pipelines.  Before using this option, first ensure that the pipeline arguments used were   correct and that templates are a good match to the data.
+  [--processing-mode=<HCPStyleData_or__Controls_whether_the_HCP_acquisition_and_processing_guidelines_should_be_treated_as_requirements.__LegacyStyleData>] - 'HCPStyleData' (the
+        default) follows the processing steps described in Glasser et al. (2013)   and requires 'HCP-Style' data acquistion.   'LegacyStyleData' allows additional processing
+        functionality and use of some acquisitions  that do not conform to 'HCP-Style' expectations.  In this script, it allows not having a high-resolution T2w image. 
+  [--usejacobian=<TRUE or FALSE>] - Whether to use jacobian modulation when correcting spin echo fieldmaps for gradient distortion
+

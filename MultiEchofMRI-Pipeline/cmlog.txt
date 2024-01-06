@@ -1,0 +1,8 @@
+
+Multi-Echo Preprocessing & Denoising Pipeline
+
+Processing the Field Maps
+Coregistering SBrefs to the Anatomical Image
+Performing Signal-Decay Based Denoising
+Removing Spatially Diffuse Noise via MGTR
+Mapping Denoised Functional Data to Surface
