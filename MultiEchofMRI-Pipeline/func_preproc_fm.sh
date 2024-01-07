@@ -22,8 +22,8 @@ echo "addpath(genpath('${MEDIR}'))" | cat - "$Subdir"/workspace/temp.m > temp &&
 echo Subdir=["'$Subdir'"] | cat - "$Subdir"/workspace/temp.m >> temp && mv temp "$Subdir"/workspace/temp.m > /dev/null 2>&1  		
 echo StartSession="$StartSession" | cat - "$Subdir"/workspace/temp.m >> temp && mv temp "$Subdir"/workspace/temp.m > /dev/null 2>&1  		
 cd "$Subdir"/workspace/ # run script via Matlab 
-# matlab -nodesktop -nosplash -r "temp; exit" > /dev/null 2>&1  
-matlab -nodesktop -nosplash -r "temp; exit"   
+matlab -nodesktop -nosplash -r "temp; exit" > /dev/null 2>&1  
+# matlab -nodesktop -nosplash -r "temp; exit"   
 
 echo -e "matlab code ran successfully! now moving to the next session"
 # delete some files;
@@ -61,12 +61,12 @@ echo -e "sessions counted!"
 # define a list of directories;
 AllFMs=$(cat "$Subdir"/AllFMs.txt) # note: this is used for parallel processing purposes.
 rm "$Subdir"/AllFMs.txt # remove intermediate file;
-echo -e "running mri_binarize"
+# echo -e "running mri_binarize"
 # create a white matter segmentation (.mgz --> .nii.gz);
 # mri_binarize --i "$Subdir"/anat/T1w/"$Subject"/mri/aparc+aseg.mgz --wm --o "$Subdir"/anat/T1w/"$Subject"/mri/white.mgz > /dev/null 2>&1 
 mri_binarize --i "$Subdir"/anat/T1w/"$Subject"/mri/aparc+aseg.mgz --wm --o "$Subdir"/anat/T1w/"$Subject"/mri/white.mgz 
 
-echo -e "running mri_convert"
+# echo -e "running mri_convert"
 # mri_convert -i "$Subdir"/anat/T1w/"$Subject"/mri/white.mgz -o "$Subdir"/anat/T1w/"$Subject"/mri/white.nii.gz --like "$Subdir"/anat/T1w/T1w_acpc_dc_restore.nii.gz > /dev/null 2>&1   # create a white matter segmentation (.mgz --> .nii.gz);
 mri_convert -i "$Subdir"/anat/T1w/"$Subject"/mri/white.mgz -o "$Subdir"/anat/T1w/"$Subject"/mri/white.nii.gz --like "$Subdir"/anat/T1w/T1w_acpc_dc_restore.nii.gz
 # create clean tmp. copy of freesurfer folder;
